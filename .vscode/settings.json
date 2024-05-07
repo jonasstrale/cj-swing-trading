@@ -1,0 +1,11 @@
+{
+    "terminal.integrated.env.linux": {
+        "PYTHONPATH": "${workspaceRoot}/jbeam_swing_trading_api"
+    },
+    "files.exclude": {
+        "jbeam-swing-trading-app/": true,
+        "jbeam_swing_trading_api/": true,
+        "jbeam-swing-trading-data/": true,
+        ".venv/": true,
+    }
+}

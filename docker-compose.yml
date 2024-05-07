@@ -1,0 +1,44 @@
+version: '4.29'
+services:
+   web:
+      hostname: frontend
+      tty: true
+      build: ./cj-swing-trading-app
+      ports:
+         - "4200:4200"
+      depends_on:
+         - api
+      volumes:
+         - type: bind
+           source: ${LOCAL_WORKSPACE_FOLDER:-.}/cj-swing-trading-app
+           target: /cj-swing-trading-app
+   api:
+      hostname: backend
+      build: ./cj_swing_trading_api
+      ports:
+         - "8000:8000"
+#      depends_on:
+#         - neo4j
+      volumes:
+        - type: bind
+          source: ${LOCAL_WORKSPACE_FOLDER:-.}/cj_swing_trading_api
+          target: /cj_swing_trading_api
+#      environment:
+#        NEO4J_AUTH: ${NEO4J_AUTH}
+#   neo4j:
+#      hostname: neo4j
+#      image: "neo4j"
+#      ports:
+#         - "7687:7687"
+#         - "7474:7474"
+#      volumes:
+#         - ${LOCAL_WORKSPACE_FOLDER:-.}/cj-swing-trading-data/data:/data
+#         - ${LOCAL_WORKSPACE_FOLDER:-.}/cj-swing-trading-data/logs:/logs
+#      environment: 
+#        NEO4J_AUTH: ${NEO4J_AUTH}
+#      healthcheck:
+#        test: wget -O - http://127.0.0.1:7474 2>&1 | grep -c -e '200 OK'
+#        interval: 1m30s
+#        timeout: 10s
+#        retries: 3
+#        start_period: 40s

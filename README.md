@@ -1,1 +1,1 @@
-# jbeam-swing-trading
+# cj-swing-trading

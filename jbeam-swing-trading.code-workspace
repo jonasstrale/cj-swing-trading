@@ -1,0 +1,37 @@
+{
+	"folders": [
+		{
+			"path": "./jbeam-swing-trading-app",
+			"name": "frontend"
+		},
+		{
+			"path": "./jbeam_swing_trading_api",
+			"name": "backend"
+		},
+		{
+			"path": "./properties",
+			"name": "properties"
+		}
+	],
+	"settings": {
+		"files.exclude": {
+			"**/.git": true,
+			"**/.DS_Store": true,
+			"**/__pycache__": true,
+			"**/.mypy_cache": true,
+			"**/.vscode": true,
+			"**/*.code-workspace": true
+		},
+		"python.languageServer": "Pylance",
+		"python.linting.pylintEnabled": false,
+		"python.analysis.diagnosticSeverityOverrides": {
+			"reportMissingModuleSource": "none"
+		},
+		"python.analysis.extraPaths": [
+			"",
+			"/home/mikael/.vscode/extensions/joedevivo.vscode-circuitpython-0.1.15/stubs",
+			"/home/mikael/.config/Code/User/globalStorage/joedevivo.vscode-circuitpython/bundle/20211208/adafruit-circuitpython-bundle-py-20211208/lib"
+		],
+		"circuitpython.board.version": null
+	}
+}

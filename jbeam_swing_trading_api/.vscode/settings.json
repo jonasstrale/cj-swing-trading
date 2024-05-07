@@ -1,0 +1,12 @@
+{
+    "python.linting.pycodestyleEnabled": true,
+    "terminal.integrated.env.linux": {
+        "PYTHONPATH": "${workspaceRoot}/sketch_api"
+    },
+    "python.pythonPath": "/usr/bin/python3",
+    "python.linting.mypyEnabled": true,
+    "python.linting.mypyArgs": [
+        "--follow-imports=silent",
+        "--show-column-numbers"
+    ]
+}
